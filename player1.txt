@@ -1,0 +1,4 @@
+player:Player1
+health:100
+damage:30
+armor:1.2
