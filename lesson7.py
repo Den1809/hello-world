@@ -166,7 +166,7 @@ class Game:
         self.barrels = Barrels()
 
         i = 0
-        while True:#(self.barrels.get_barrel_count() > 0) and (self.player.filled_nums > 0 and self.comp.filled_nums > 0):
+        while True:
             i += 1
             barrel = self.barrels.get_barrel()
             print('Ход № {}. Счет {}:{}'.format(i, self.player.MAX_FILLED_COLUMNS*self.player.CARD_ROWS-self.player.filled_nums,
@@ -179,7 +179,6 @@ class Game:
             if self.comp.value_in_card(barrel):
                 self.comp.mark_value(barrel)
 
-            self.player.mark_value(barrel)
             choice = input('Зачеркнуть цифру? y/n')
             if choice.upper() == 'Y':
                 if self.player.value_in_card(barrel):
