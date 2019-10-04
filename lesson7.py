@@ -77,7 +77,6 @@ class Card():
                     self.filled_nums += 1
             card_row.sort(key=int)
             self.card_values.append(card_row)
-        print(self.filled_nums)
 
         # вариант с прямой адресацией списка
         #     i = 0
@@ -100,7 +99,6 @@ class Card():
                     self.card_values[i][empty_pos] = ' '
                     self.filled_nums -=1
             i += 1
-        print(self.filled_nums)
 
     def show_card(self):
         # print(self.card_values)
@@ -209,7 +207,7 @@ class Game:
                                   self.comp.MAX_FILLED_COLUMNS * self.comp.CARD_ROWS - self.comp.filled_nums))
 
 
-player_name = ('Введите имя игрока:')
+player_name = input('Введите имя игрока:')
 human = Player(player_name)
 comp = Player('Компьютер')
 game = Game(human, comp)
