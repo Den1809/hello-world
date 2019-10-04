@@ -44,8 +44,8 @@
 Подсказка: для работы с псевдослучайными числами удобно использовать
 модуль random: http://docs.python.org/3/library/random.html
 """
-import random
 
+import random
 
 class Card():
     def __init__(self):
